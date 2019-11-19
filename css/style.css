@@ -5,7 +5,7 @@
     width: 400px;
 }
 #veditor {
-    background-image: url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/comment-bg.png);
+    background-image: url(https://i.loli.net/2019/11/13/8QagZNVkpfe7X4U.jpg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
@@ -3601,7 +3601,7 @@ a.page-numbers {
     background-color:rgba(255,255,255,0)
 }
 .comment-respond textarea {
-    background-image:url('https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/comment-bg.png');
+    background-image:url('https://i.loli.net/2019/11/13/8QagZNVkpfe7X4U.jpg');
     background-size:contain;
     background-repeat:no-repeat;
     background-position:right;
@@ -3943,6 +3943,7 @@ li.feature-2 {
     }
     .focusinfo .header-tou img {
         width: 100px !important;
+        height: 100px !important;
     }
     .header-info {
         width: 90% !important;
@@ -3951,7 +3952,7 @@ li.feature-2 {
         top: 98px !important;
     }
     .top-social_v2 li {
-        margin-right: 0px !important;
+        margin-right: 0px !important; 
         cursor: url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/ayuda.cur),auto !important;
     }
 }
@@ -3964,7 +3965,7 @@ li.feature-2 {
     width: 100%;
     z-index: 0;
 }
-.blank {
+}.blank {
     padding-top:80px;
     background-color:rgba(255,255,255,1)
 }

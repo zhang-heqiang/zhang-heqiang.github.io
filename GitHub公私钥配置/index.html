@@ -347,19 +347,10 @@
         <!--<div class="toc-entry-content"> 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <h2 id="SSH简介"><a href="#SSH简介" class="headerlink" title="SSH简介"></a>SSH简介</h2><pre><code>公钥和私钥亦称&quot;非对称加密算法&quot;,是&quot;对称加密(用户名和密码)&quot;的进一步提升,每个用户自己设定一把
-特定的仅为本人所知的私有密钥，用来解密签名；同时设定一把公共密钥由本人公开，为一组用户共享，
-用于加密和验证签名。
-</code></pre><h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><pre><code>Git使用https协议每次pull, push需要输入密码,然后使用SSH密钥操作更加简便,公钥加密内容只能用
-私钥解密,私钥加密只能用公钥解密!
-</code></pre><h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><pre><code>本地安装Git(注意:为避免之前配置过,建议先删除.ssh文件夹)
-桌面右键,点击 **Git Bash Here** (.ssh文件夹一般在系统盘-&gt;用户下)
-**ssh-keygen -t rsa -C &quot;githhub账号绑定的邮箱&quot;** (闭上眼睛,按三次Enter)
-**cd ~/.ssh** (进入.ssh文件夹)
-**cat id_rsa.pub** 查看此文件,直接输出秘钥
-复制秘钥,打开GitHub **点击头像-&gt;settings-&gt;SSH and GPG keys-&gt;New SSH key**
-私钥名字符合规范即可**粘贴秘钥** (一定要注意秘钥的格式正确,否则会添加失败)
-</code></pre>
+          <h2 id="SSH简介"><a href="#SSH简介" class="headerlink" title="SSH简介"></a>SSH简介</h2><p> 公钥和私钥亦称”非对称加密算法”,是”对称加密(用户名和密码)”的进一步提升,每个用户自己设定一把<br> 特定的仅为本人所知的私有密钥，用来解密签名；同时设定一把公共密钥由本人公开，为一组用户共享，<br> 用于加密和验证签名。</p>
+<h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p> Git使用https协议每次pull, push需要输入密码,然后使用SSH密钥操作更加简便,公钥加密内容只能用<br> 私钥解密,私钥加密只能用公钥解密!</p>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><p> 本地安装Git(注意:为避免之前配置过,建议先删除.ssh文件夹)<br> 桌面右键,点击 <strong>Git Bash Here</strong> (.ssh文件夹一般在系统盘-&gt;用户下)<br> <strong>ssh-keygen -t rsa -C “githhub账号绑定的邮箱”</strong> (闭上眼睛,按三次Enter)<br> <strong>cd ~/.ssh</strong> (进入.ssh文件夹)<br> <strong>cat id_rsa.pub</strong> 查看此文件,直接输出秘钥<br> 复制秘钥,打开GitHub <strong>点击头像-&gt;settings-&gt;SSH and GPG keys-&gt;New SSH key</strong><br> 私钥名字符合规范即可<strong>粘贴秘钥</strong> (一定要注意秘钥的格式正确,否则会添加失败)</p>
+
         </div>
         <!-- .entry-content -->
         <div class="single-reward">

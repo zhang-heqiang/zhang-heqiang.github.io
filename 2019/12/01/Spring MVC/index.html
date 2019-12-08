@@ -361,7 +361,31 @@
         <!--<div class="toc-entry-content"> 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <h1 id="听说熬夜对身体不好-于是我改成了通宵"><a href="#听说熬夜对身体不好-于是我改成了通宵" class="headerlink" title="听说熬夜对身体不好,于是我改成了通宵!"></a>听说熬夜对身体不好,于是我改成了通宵!</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><pre><code>未完待续...
+          <h1 id="听说熬夜对身体不好-于是我改成了通宵"><a href="#听说熬夜对身体不好-于是我改成了通宵" class="headerlink" title="听说熬夜对身体不好,于是我改成了通宵!"></a>听说熬夜对身体不好,于是我改成了通宵!</h1><h2 id="执行流程"><a href="#执行流程" class="headerlink" title="执行流程"></a>执行流程</h2><p>①用户发送请求至前端控制器DispatcherServlet。</p>
+<p>②DispatcherServlet收到请求调用HandlerMapping处理器映射器。</p>
+<p>③处理器映射器找到具体的处理器(可以根据xml配置、注解进行查找)，生成处理器对象及处理器拦截器(如果有则生成)一并返回给DispatcherServlet。</p>
+<p>④DispatcherServlet调用HandlerAdapter处理器适配器。</p>
+<p>⑤HandlerAdapter经过适配调用具体的处理器(Controller，也叫后端控制器)。</p>
+<p>⑥Controller执行完成返回ModelAndView。</p>
+<p>⑦HandlerAdapter将controller执行结果ModelAndView返回给DispatcherServlet。</p>
+<p>⑧DispatcherServlet将ModelAndView传给ViewReslover视图解析器。</p>
+<p>⑨ViewReslover解析后返回具体View。</p>
+<p>⑩DispatcherServlet根据View进行渲染视图（即将模型数据填充至视图中）。DispatcherServlet响应用户。</p>
+<h2 id="注解解析"><a href="#注解解析" class="headerlink" title="注解解析"></a>注解解析</h2><h3 id="RequestMapping"><a href="#RequestMapping" class="headerlink" title="@RequestMapping"></a>@RequestMapping</h3><pre><code> @RequestMapping     用于建立请求 URL 和处理请求方法之间的对应关系
+</code></pre><h3 id="RequestParam"><a href="#RequestParam" class="headerlink" title="@RequestParam"></a>@RequestParam</h3><pre><code> @RequestParam      当请求参数名称与Controller的业务方法参数名称不一致时，就需要通过@RequestParam注解显示的绑定
+</code></pre><h3 id="ResponseBody"><a href="#ResponseBody" class="headerlink" title="@ResponseBody"></a>@ResponseBody</h3><pre><code> @ResponseBody      告知Spring MVC 直接响应回字符串,而不是进行页面跳转
+</code></pre><h3 id="视图解析器配置"><a href="#视图解析器配置" class="headerlink" title="@视图解析器配置"></a>@视图解析器配置</h3><pre><code>&lt;!--配置内部资源视图解析器--&gt;
+&lt;bean class=&quot;org.springframework.web.servlet.view.InternalResourceViewResolver&quot;&gt;
+  &lt;property name=&quot;prefix&quot; value=&quot;/WEB-INF/views/&quot;&gt;&lt;/property&gt;
+  &lt;property name=&quot;suffix&quot; value=&quot;.jsp&quot;&gt;&lt;/property&gt;
+&lt;/bean&gt;
+</code></pre><h2 id="SpringMVC的开发步骤"><a href="#SpringMVC的开发步骤" class="headerlink" title="SpringMVC的开发步骤"></a>SpringMVC的开发步骤</h2><p>   ①导入SpringMVC相关坐标</p>
+<p>   ②配置SpringMVC核心控制器DispathcerServlet</p>
+<p>   ③创建Controller类和视图页面</p>
+<p>   ④使用注解配置Controller类中业务方法的映射地址</p>
+<p>   ⑤配置SpringMVC核心文件 spring-mvc.xml</p>
+<p>   ⑥客户端发起请求测试</p>
+<pre><code>未完待续...
 </code></pre>
         </div>
         <!-- .entry-content -->
@@ -390,9 +414,26 @@
       <div class="toc" style="background: none;"></div>
       <section class="post-squares nextprev">
         
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/2019/12/08/data-kinds/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://i.loli.net/2019/11/13/8QagZNVkpfe7X4U.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://i.loli.net/2019/11/13/8QagZNVkpfe7X4U.jpg">
+              </div>
+              <span class="label">
+              上一篇</span>
+              <div class="info">
+                <h3>
+                数据类型</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
         
           
-            <div class="post-nepre full next">
+            <div class="post-nepre half next">
           
             <a href="/2019/11/26/JDK%208%20%E7%89%B9%E6%80%A7/" rel="next">
               <div class="background">

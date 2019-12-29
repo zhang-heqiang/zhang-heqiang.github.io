@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">数据类型 | 蓦然回首 博客</title>
+  <title itemprop="name">Mysql数据库中的SQL基础语法 | 蓦然回首 博客</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -93,14 +93,6 @@
               
             
               
-                <li>
-                  <a href="https://github.com/zhang-heqiang/zhang-heqiang.github.io" target="_blank" class="social-github" title="github">
-                    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/github.png">
-                  </a>
-                </li>
-              
-            
-              
                 <li class="wechat">
                   <a href="/#">
                     <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/wechat.png">
@@ -108,6 +100,14 @@
                   <div class="wechatInner">
                     <img src="https://i.loli.net/2019/11/12/PFE9UD6X3ghKCsv.jpg">
                   </div>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://github.com/zhang-heqiang/zhang-heqiang.github.io" target="_blank" class="social-github" title="github">
+                    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/github.png">
+                  </a>
                 </li>
               
             
@@ -335,7 +335,7 @@
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title" style="color: red">
-      数据类型</h1>
+      Mysql数据库中的SQL基础语法</h1>
       <p class="entry-census" style="color: blue;font-weight: bolder">
 <!--        <span>-->
 <!--          <a href="">-->
@@ -361,22 +361,71 @@
         <!--<div class="toc-entry-content"> 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <h1 id="这么冷的天连个一起吃火锅的都没有-还好我自己有钱"><a href="#这么冷的天连个一起吃火锅的都没有-还好我自己有钱" class="headerlink" title="这么冷的天连个一起吃火锅的都没有,还好我自己有钱!"></a>这么冷的天连个一起吃火锅的都没有,还好我自己有钱!</h1><h2 id="基本数据类型-在java中整数默认是int类型，浮点数默认是double类型"><a href="#基本数据类型-在java中整数默认是int类型，浮点数默认是double类型" class="headerlink" title="基本数据类型(在java中整数默认是int类型，浮点数默认是double类型)"></a>基本数据类型(在java中整数默认是int类型，浮点数默认是double类型)</h2><h3 id="数值型"><a href="#数值型" class="headerlink" title="数值型"></a>数值型</h3><pre><code>整数       内存占用                    取值范围
-byte          1              负的2的7次方 ~ 2的7次方-1(-128~127)
-short         2              负的2的15次方 ~ 2的15次方-1(-32768~32767)
-int           4              负的2的31次方 ~ 2的31次方-1
-long          8              负的2的63次方 ~ 2的63次方-1
-浮点数
-float         4              1.401298e-45 ~ 3.402823e+38
-double        8            4.9000000e-324 ~ 1.797693e+308
-字符 
-char          2                        0-65535
-</code></pre><h3 id="非数值型"><a href="#非数值型" class="headerlink" title="非数值型"></a>非数值型</h3><pre><code>布尔:      内存占用                    取值范围
-boolean       1                      true，false
-</code></pre><h2 id="引用数据类型"><a href="#引用数据类型" class="headerlink" title="引用数据类型."></a>引用数据类型.</h2><pre><code>类:     class
-接口:   interface
-数组:   []
-</code></pre>
+          <h1 id="这么冷的天连个一起吃火锅的都没有-还好我自己有钱"><a href="#这么冷的天连个一起吃火锅的都没有-还好我自己有钱" class="headerlink" title="这么冷的天连个一起吃火锅的都没有,还好我自己有钱!"></a>这么冷的天连个一起吃火锅的都没有,还好我自己有钱!</h1><h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><pre><code>DateBase(DB):概念: 用于存储和管理数据的仓库
+特点:
+     1. 持久化存储数据的
+     2. 方便存储和管理数据
+     3. 使用了统一的方式操作数据库 -- SQL
+</code></pre><h2 id="手动登录MySQL"><a href="#手动登录MySQL" class="headerlink" title="手动登录MySQL"></a>手动登录MySQL</h2><pre><code>1. mysql -uroot -p密码
+2. mysql -hip -uroot -p连接目标的密码
+3. mysql --host=ip --user=root --password=连接目标的密码
+</code></pre><hr>
+<h2 id="操作数据库"><a href="#操作数据库" class="headerlink" title="操作数据库"></a>操作数据库</h2><h3 id="C-Create-创建create"><a href="#C-Create-创建create" class="headerlink" title="C(Create):创建create"></a>C(Create):创建create</h3><pre><code>* create database 数据库名称;
+* create database if not exists 数据库名称;
+* create database 数据库名称 character set 字符集名;
+</code></pre><h3 id="D-Delete-删除drop"><a href="#D-Delete-删除drop" class="headerlink" title="D(Delete):删除drop"></a>D(Delete):删除drop</h3><pre><code>* drop database 数据库名称;
+* drop database if exists 数据库名称;
+</code></pre><h3 id="U-Update-修改alter"><a href="#U-Update-修改alter" class="headerlink" title="U(Update):修改alter"></a>U(Update):修改alter</h3><pre><code>* alter database 数据库名称 character set 字符集名称;
+</code></pre><h3 id="R-Retrieve-查询show"><a href="#R-Retrieve-查询show" class="headerlink" title="R(Retrieve)查询show"></a>R(Retrieve)查询show</h3><pre><code>* show databases;查询数据库列表:
+* show create database 数据库名称;查询某个数据库的创建语句
+</code></pre><h3 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h3><pre><code>* use 数据库名称;
+* create table 表名 like 被复制的表名;
+</code></pre><hr>
+<h2 id="操作表"><a href="#操作表" class="headerlink" title="操作表"></a>操作表</h2><h3 id="C-Create-创建"><a href="#C-Create-创建" class="headerlink" title="C(Create):创建"></a>C(Create):创建</h3><pre><code>create table 表名(
+    列名1 数据类型1,
+    列名2 数据类型2,
+    ....
+    列名n 数据类型n(此处没有逗号)
+</code></pre><h3 id="U-Update-修改"><a href="#U-Update-修改" class="headerlink" title="U(Update):修改"></a>U(Update):修改</h3><pre><code>1. 修改表名
+    alter table 表名 rename to 新的表名;
+2. 修改表的字符集
+    alter table 表名 character set 字符集名称;
+3. 添加一列
+    alter table 表名 add 列名 数据类型;
+4. 修改列名称 类型
+    alter table 表名 change 列名 新列别 新数据类型;
+    alter table 表名 modify 列名 新数据类型;
+5. 删除列
+    alter table 表名 drop 列名;
+</code></pre><h3 id="R-Retrieve-：查询"><a href="#R-Retrieve-：查询" class="headerlink" title="R(Retrieve)：查询"></a>R(Retrieve)：查询</h3><pre><code>show tables;查询表结构 
+</code></pre><hr>
+<h2 id="操作数据"><a href="#操作数据" class="headerlink" title="操作数据"></a>操作数据</h2><h3 id="添加数据-insert"><a href="#添加数据-insert" class="headerlink" title="添加数据 insert"></a>添加数据 insert</h3><pre><code>insert into 表名(列名1,列名2,...列名n) values(值1,值2,...值n);
+</code></pre><h3 id="删除数据-delete"><a href="#删除数据-delete" class="headerlink" title="删除数据 delete"></a>删除数据 delete</h3><pre><code>delete from 表名 [where 条件];
+delete from 表名; 不推荐使用。有多少条记录就会执行多少次删除操作
+TRUNCATE TABLE 表名; 推荐使用，效率更高 先删除表，然后再创建一张一样的表
+</code></pre><h3 id="修改数据-update"><a href="#修改数据-update" class="headerlink" title="修改数据 update"></a>修改数据 update</h3><pre><code>update 表名 set 列名1 = 值1, 列名2 = 值2,... [where 条件];如果不加任何条件，则会将表中所有记录全部修改
+</code></pre><h3 id="查询数据-select"><a href="#查询数据-select" class="headerlink" title="查询数据 select"></a>查询数据 select</h3><h4 id="语法格式"><a href="#语法格式" class="headerlink" title="语法格式"></a>语法格式</h4><pre><code>select
+    字段列表
+from
+    表名列表
+where
+    条件列表
+group by
+    分组字段
+having
+    分组之后的条件
+order by
+    排序
+limit
+    分页限定
+</code></pre><h4 id="空值替换"><a href="#空值替换" class="headerlink" title="空值替换"></a>空值替换</h4><pre><code>* ifnull(表达式1,表达式2);若表达式1为空替换为表达式2
+</code></pre><h4 id="分页查询"><a href="#分页查询" class="headerlink" title="分页查询"></a>分页查询</h4><pre><code>limit 是一个MySQL&quot;方言&quot;
+公式：开始的索引 = （当前的页码 - 1） * 每页显示的条数
+    SELECT * FROM student LIMIT 0,3; -- 第1页        -- 每页显示3条记录 
+    SELECT * FROM student LIMIT 3,3; -- 第2页
+    SELECT * FROM student LIMIT 6,3; -- 第3页
+</code></pre><hr>
+<h3 id="未完待续…"><a href="#未完待续…" class="headerlink" title="未完待续…"></a>未完待续…</h3>
         </div>
         <!-- .entry-content -->
         <div class="single-reward">
@@ -407,7 +456,7 @@ boolean       1                      true，false
           
             <div class="post-nepre half previous">
           
-            <a href="/2019/12/08/data-structure/" rel="prev">
+            <a href="/2019/12/11/Oracle%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/" rel="prev">
               <div class="background">
                 <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://i.loli.net/2019/11/13/8QagZNVkpfe7X4U.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://i.loli.net/2019/11/13/8QagZNVkpfe7X4U.jpg">
               </div>
@@ -415,7 +464,7 @@ boolean       1                      true，false
               上一篇</span>
               <div class="info">
                 <h3>
-                数据结构</h3>
+                ORACLE数据库中的SQL语法机巧</h3>
                 <hr>
               </div>
             </a>
@@ -425,7 +474,7 @@ boolean       1                      true，false
           
             <div class="post-nepre half next">
           
-            <a href="/2019/12/01/Spring%20MVC/" rel="next">
+            <a href="/2019/12/08/%E6%95%B0%E7%BB%84%E4%B8%8E%E9%9B%86%E5%90%88/" rel="next">
               <div class="background">
                 <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://i.loli.net/2019/11/13/8QagZNVkpfe7X4U.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://i.loli.net/2019/11/13/8QagZNVkpfe7X4U.jpg">
               </div>
@@ -433,7 +482,7 @@ boolean       1                      true，false
               下一篇</span>
               <div class="info">
                 <h3>
-                Spring MVC</h3>
+                数组与集合</h3>
                 <hr>
               </div>
             </a>
@@ -844,6 +893,16 @@ $(document).ready(function() {
     })
   });
 </script>
+
+  <!-- 雪花特效 -->
+  <script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+      document.write('<script type="text/javascript" src="../source/js/snow.js"><\/script>');
+    }
+  </script>
+  <script type="text/javascript" src="../source/css/lib.min.css"></script>
+
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         tex2jax: {
@@ -860,4 +919,3 @@ $(document).ready(function() {
 </script>
 <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
-</html>

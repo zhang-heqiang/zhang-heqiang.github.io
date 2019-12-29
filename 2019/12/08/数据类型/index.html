@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">Mysql数据库中的SQL基础语法 | 蓦然回首 博客</title>
+  <title itemprop="name">数据类型 | 蓦然回首 博客</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -93,14 +93,6 @@
               
             
               
-                <li>
-                  <a href="https://github.com/zhang-heqiang/zhang-heqiang.github.io" target="_blank" class="social-github" title="github">
-                    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/github.png">
-                  </a>
-                </li>
-              
-            
-              
                 <li class="wechat">
                   <a href="/#">
                     <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/wechat.png">
@@ -108,6 +100,14 @@
                   <div class="wechatInner">
                     <img src="https://i.loli.net/2019/11/12/PFE9UD6X3ghKCsv.jpg">
                   </div>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://github.com/zhang-heqiang/zhang-heqiang.github.io" target="_blank" class="social-github" title="github">
+                    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/github.png">
+                  </a>
                 </li>
               
             
@@ -335,7 +335,7 @@
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title" style="color: red">
-      Mysql数据库中的SQL基础语法</h1>
+      数据类型</h1>
       <p class="entry-census" style="color: blue;font-weight: bolder">
 <!--        <span>-->
 <!--          <a href="">-->
@@ -361,7 +361,21 @@
         <!--<div class="toc-entry-content"> 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <h1 id="这么冷的天连个一起吃火锅的都没有-还好我自己有钱"><a href="#这么冷的天连个一起吃火锅的都没有-还好我自己有钱" class="headerlink" title="这么冷的天连个一起吃火锅的都没有,还好我自己有钱!"></a>这么冷的天连个一起吃火锅的都没有,还好我自己有钱!</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><pre><code>未完待续...
+          <h1 id="这么冷的天连个一起吃火锅的都没有-还好我自己有钱"><a href="#这么冷的天连个一起吃火锅的都没有-还好我自己有钱" class="headerlink" title="这么冷的天连个一起吃火锅的都没有,还好我自己有钱!"></a>这么冷的天连个一起吃火锅的都没有,还好我自己有钱!</h1><h2 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h2><h3 id="数值型"><a href="#数值型" class="headerlink" title="数值型"></a>数值型</h3><pre><code>整数       内存占用                    取值范围
+byte          1              负的2的7次方 ~ 2的7次方-1(-128~127)
+short         2              负的2的15次方 ~ 2的15次方-1(-32768~32767)
+int           4              负的2的31次方 ~ 2的31次方-1
+long          8              负的2的63次方 ~ 2的63次方-1
+浮点数
+float         4              1.401298e-45 ~ 3.402823e+38
+double        8            4.9000000e-324 ~ 1.797693e+308
+字符 
+char          2                        0-65535
+</code></pre><h3 id="非数值型"><a href="#非数值型" class="headerlink" title="非数值型"></a>非数值型</h3><pre><code>布尔:      内存占用                    取值范围
+boolean       1                      true，false
+</code></pre><h2 id="引用数据类型"><a href="#引用数据类型" class="headerlink" title="引用数据类型."></a>引用数据类型.</h2><pre><code>类:     class
+接口:   interface
+数组:   []
 </code></pre>
         </div>
         <!-- .entry-content -->
@@ -393,7 +407,7 @@
           
             <div class="post-nepre half previous">
           
-            <a href="/2019/12/08/%E5%BC%80%E5%8F%91%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/" rel="prev">
+            <a href="/2019/12/08/%E6%95%B0%E7%BB%84%E4%B8%8E%E9%9B%86%E5%90%88/" rel="prev">
               <div class="background">
                 <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://i.loli.net/2019/11/13/8QagZNVkpfe7X4U.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://i.loli.net/2019/11/13/8QagZNVkpfe7X4U.jpg">
               </div>
@@ -401,7 +415,7 @@
               上一篇</span>
               <div class="info">
                 <h3>
-                Java开发命名规范</h3>
+                数组与集合</h3>
                 <hr>
               </div>
             </a>
@@ -411,7 +425,7 @@
           
             <div class="post-nepre half next">
           
-            <a href="/2019/12/08/data-structure/" rel="next">
+            <a href="/2019/12/01/Spring%20MVC/" rel="next">
               <div class="background">
                 <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://i.loli.net/2019/11/13/8QagZNVkpfe7X4U.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://i.loli.net/2019/11/13/8QagZNVkpfe7X4U.jpg">
               </div>
@@ -419,7 +433,7 @@
               下一篇</span>
               <div class="info">
                 <h3>
-                数据结构</h3>
+                Spring MVC</h3>
                 <hr>
               </div>
             </a>
@@ -830,6 +844,16 @@ $(document).ready(function() {
     })
   });
 </script>
+
+  <!-- 雪花特效 -->
+  <script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+      document.write('<script type="text/javascript" src="../source/js/snow.js"><\/script>');
+    }
+  </script>
+  <script type="text/javascript" src="../source/css/lib.min.css"></script>
+
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         tex2jax: {
@@ -846,4 +870,3 @@ $(document).ready(function() {
 </script>
 <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
-</html>

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">数据结构 | 蓦然回首 博客</title>
+  <title itemprop="name">ORACLE数据库中的SQL语法机巧 | 蓦然回首 博客</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -93,14 +93,6 @@
               
             
               
-                <li>
-                  <a href="https://github.com/zhang-heqiang/zhang-heqiang.github.io" target="_blank" class="social-github" title="github">
-                    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/github.png">
-                  </a>
-                </li>
-              
-            
-              
                 <li class="wechat">
                   <a href="/#">
                     <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/wechat.png">
@@ -108,6 +100,14 @@
                   <div class="wechatInner">
                     <img src="https://i.loli.net/2019/11/12/PFE9UD6X3ghKCsv.jpg">
                   </div>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://github.com/zhang-heqiang/zhang-heqiang.github.io" target="_blank" class="social-github" title="github">
+                    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/social/github.png">
+                  </a>
                 </li>
               
             
@@ -335,7 +335,7 @@
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title" style="color: red">
-      数据结构</h1>
+      ORACLE数据库中的SQL语法机巧</h1>
       <p class="entry-census" style="color: blue;font-weight: bolder">
 <!--        <span>-->
 <!--          <a href="">-->
@@ -347,7 +347,7 @@
         </span>
         <span class="bull">
         ·</span>
-        2019-12-8<span class="bull">
+        2019-12-11<span class="bull">
         ·</span>
       <span id="busuanzi_value_page_pv"></span>次阅读</p>
     </header>
@@ -361,56 +361,7 @@
         <!--<div class="toc-entry-content"> 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <h1 id="这个世界没有谁离不开谁-就算是鱼离开了水-也能烤着吃"><a href="#这个世界没有谁离不开谁-就算是鱼离开了水-也能烤着吃" class="headerlink" title="这个世界没有谁离不开谁,就算是鱼离开了水,也能烤着吃!"></a>这个世界没有谁离不开谁,就算是鱼离开了水,也能烤着吃!</h1><h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><h3 id="基础了解"><a href="#基础了解" class="headerlink" title="基础了解"></a>基础了解</h3><pre><code>定义:用于存储多个元素且是同一种数据类型的容器叫数组
-特点:
-* 数组是有索引的
-* 数组一旦创建,长度不能改变
-* 数组可以存储基本数据类型也可存储引用数据类型
-</code></pre><h3 id="数组创建"><a href="#数组创建" class="headerlink" title="数组创建"></a>数组创建</h3><pre><code>动态初始化:数据类型[] 数组名 = new 数据类型[长度];
-静态初始化:
-    标准的格式:  数据类型[] 数组名 = new 数据类型[]{元素1,元素2,...};
-    简化的格式:  数据类型[] 数组名 = {元素1,元素2,...};
-</code></pre><h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><h3 id="集合体系图"><a href="#集合体系图" class="headerlink" title="集合体系图"></a>集合体系图</h3><p><img src="https://i.loli.net/2019/12/08/ACpBDYfzeLXWO45.jpg" alt="list.jpg"></p>
-<h3 id="单例集合"><a href="#单例集合" class="headerlink" title="单例集合"></a>单例集合</h3><p>collection是单例集合的顶层接口，它表示一组对象，这些对象也称为Collection的元素.<br>JDK 不提供此接口的任何直接实现，它提供更具体的子接口（如Set和List）实现.</p>
-<h3 id="List集合"><a href="#List集合" class="headerlink" title="List集合"></a>List集合</h3><pre><code>特点:有索引,可以存储重复元素 元素存取有序 
-</code></pre><h3 id="Set集合"><a href="#Set集合" class="headerlink" title="Set集合"></a>Set集合</h3><pre><code>元素存取无序、没有索引、只能通过迭代器或增强for循环遍历 不能存储重复元素 
-</code></pre><h3 id="HashSet集合"><a href="#HashSet集合" class="headerlink" title="HashSet集合"></a>HashSet集合</h3><pre><code>底层数据结构是哈希表 
-没有索引,只能通过迭代器和增强for遍历
-不能存储重复元素,存取可能无序
-</code></pre><h3 id="LinkedHashSet集合"><a href="#LinkedHashSet集合" class="headerlink" title="LinkedHashSet集合"></a>LinkedHashSet集合</h3><pre><code>* 哈希表和链表实现的Set接口，具有可预测的迭代次序
-* 由链表保证元素有序，也就是说元素的存储和取出顺序是一致的
-* 由哈希表保证元素唯一，也就是说没有重复的元素 
-</code></pre><h3 id="TreeSet集合"><a href="#TreeSet集合" class="headerlink" title="TreeSet集合"></a>TreeSet集合</h3><pre><code>* 元素有序，可以按照一定的规则进行排序，具体排序方式取决于构造方法TreeSet()：根据其元素的自然排序进行排序 TreeSet(Comparator     comparator) ：根据指定的比较器进行排序
-* 没有带索引的方法，所以不能使用普通for循环遍历 
-* 由于是Set集合，所以不包含重复元素的集合 
-</code></pre><h3 id="遍历方式"><a href="#遍历方式" class="headerlink" title="遍历方式"></a>遍历方式</h3><pre><code>集合专用遍历方式,通过集合的iterator()方法得到,格式如下:
-Iterator&lt;String&gt; it = 集合.iterator();
-while (it.hasNext()){
-     System.out.println(it.next());
-   }   
-</code></pre><h3 id="Collections是针对集合操作的工具类"><a href="#Collections是针对集合操作的工具类" class="headerlink" title="Collections是针对集合操作的工具类"></a>Collections是针对集合操作的工具类</h3><pre><code>public static &lt;T extends Comparable&lt;? super T&gt;&gt; void sort​(List&lt;T&gt; list)：将指定列表按升序排序
-public static void reverse​(List&lt;?&gt; list)：反转指定列表中元素的顺序
-public static void shuffle​(List&lt;?&gt; list)：使用默认的随机源随机排列指定的列表
-</code></pre><h2 id="Map集合"><a href="#Map集合" class="headerlink" title="Map集合"></a>Map集合</h2><p>双列集合 也称为<strong>夫妻对集合</strong>,由 K 和 V 组成的元素,Key  是不允许重复的,K 和 V 允许存储NULL的 但是 K 仅允许存储一次NULL</p>
-<h3 id="Map集合常用获取功能"><a href="#Map集合常用获取功能" class="headerlink" title="Map集合常用获取功能"></a>Map集合常用获取功能</h3><pre><code>* V get(Object key)              : 根据键获取值
-* Set&lt;K&gt; keySet()                : 获取所有键的集合
-* Collection&lt;V&gt; values()         : 获取所有值的集合
-* Set&lt;Map.Entry&lt;K,V&gt;&gt; entrySet() : 获取所有键值对对象的集合    
-</code></pre><h3 id="Map集合的遍历方式"><a href="#Map集合的遍历方式" class="headerlink" title="Map集合的遍历方式"></a>Map集合的遍历方式</h3><pre><code>1.先获取键的集合再遍历
-Set&lt;String&gt; set = map.keySet();
-     for (String key : set) {
-          System.out.println(key + &quot; ，&quot; +  map.get(key));
-     }
-
-2.直接获取所有键值对集合
-Set&lt;Map.Entry&lt;String, String&gt;&gt; entrySet = map.entrySet();
-     for (Map.Entry&lt;String, String&gt; entry : entrySet) {
-          String key = entry.getKey();
-          String value = entry.getValue();
-          System.out.println(key +&quot;=&quot; + value);
-     }
-</code></pre><h2 id="数据结构特点"><a href="#数据结构特点" class="headerlink" title="数据结构特点"></a>数据结构特点</h2><p>栈:先进后出<br>队列:先进先出<br>数组:查询快,增减慢<br>链表:查询慢,增删快(对比数组)<br>哈希表结构:查询 增删 都快</p>
-<h2 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h2><pre><code>如果有误,欢迎留言或联系博主...
+          <h1 id="鱼和熊掌不可兼得-但是单身和穷可以啊"><a href="#鱼和熊掌不可兼得-但是单身和穷可以啊" class="headerlink" title="鱼和熊掌不可兼得,但是单身和穷可以啊!!"></a>鱼和熊掌不可兼得,但是单身和穷可以啊!!</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><pre><code>未完待续...
 </code></pre>
         </div>
         <!-- .entry-content -->
@@ -439,28 +390,11 @@ Set&lt;Map.Entry&lt;String, String&gt;&gt; entrySet = map.entrySet();
       <div class="toc" style="background: none;"></div>
       <section class="post-squares nextprev">
         
-          
-            <div class="post-nepre half previous">
-          
-            <a href="/2019/12/08/SQL-MySql/" rel="prev">
-              <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://i.loli.net/2019/11/13/8QagZNVkpfe7X4U.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://i.loli.net/2019/11/13/8QagZNVkpfe7X4U.jpg">
-              </div>
-              <span class="label">
-              上一篇</span>
-              <div class="info">
-                <h3>
-                Mysql数据库中的SQL基础语法</h3>
-                <hr>
-              </div>
-            </a>
-          </div>
-        
         
           
-            <div class="post-nepre half next">
+            <div class="post-nepre full next">
           
-            <a href="/2019/12/08/data-kinds/" rel="next">
+            <a href="/2019/12/08/MySql%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" rel="next">
               <div class="background">
                 <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://i.loli.net/2019/11/13/8QagZNVkpfe7X4U.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://i.loli.net/2019/11/13/8QagZNVkpfe7X4U.jpg">
               </div>
@@ -468,7 +402,7 @@ Set&lt;Map.Entry&lt;String, String&gt;&gt; entrySet = map.entrySet();
               下一篇</span>
               <div class="info">
                 <h3>
-                数据类型</h3>
+                Mysql数据库中的SQL基础语法</h3>
                 <hr>
               </div>
             </a>
@@ -879,6 +813,16 @@ $(document).ready(function() {
     })
   });
 </script>
+
+  <!-- 雪花特效 -->
+  <script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+      document.write('<script type="text/javascript" src="../source/js/snow.js"><\/script>');
+    }
+  </script>
+  <script type="text/javascript" src="../source/css/lib.min.css"></script>
+
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         tex2jax: {
@@ -895,4 +839,3 @@ $(document).ready(function() {
 </script>
 <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
-</html>

@@ -499,13 +499,13 @@ $(document).ready(function () {
       setCookie('bgImgSetting', url, 30)
     })
   }
-  changeBG('#sakura-bg', 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/themebg/sakura.png')
-  changeBG('#gribs-bg', 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/themebg/plaid.jpg')
-  changeBG('#pixiv-bg', 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/themebg/star.png')
-  changeBG('#KAdots-bg', 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/themebg/point.png')
-  changeBG('#totem-bg', 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/themebg/little-monster.png')
-  changeBGnoTrans('#bing-bg', 'https://api.shino.cc/bing/')
-  $('.skin-menu #white-bg').click(function () {
+  changeBG('#sakura-cover', 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/themebg/sakura.png')
+  changeBG('#gribs-cover', 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/themebg/plaid.jpg')
+  changeBG('#pixiv-cover', 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/themebg/star.png')
+  changeBG('#KAdots-cover', 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/themebg/point.png')
+  changeBG('#totem-cover', 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/themebg/little-monster.png')
+  changeBGnoTrans('#bing-cover', 'https://api.shino.cc/bing/')
+  $('.skin-menu #white-cover').click(function () {
     mashiro_global.variables.skinSecter = false
     mashiro_global.variables.isNight = false
     $('#night-mode-cover').css('visibility', 'hidden')
@@ -518,7 +518,7 @@ $(document).ready(function () {
     closeSkinMenu()
     setCookie('bgImgSetting', '', 30)
   })
-  $('.skin-menu #dark-bg').click(function () {
+  $('.skin-menu #dark-cover').click(function () {
     mashiro_global.variables.skinSecter = true
     mashiro_global.variables.isNight = true
     $('body').css('background-image', 'url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/starry_sky.png)')
@@ -570,10 +570,10 @@ function preBG () {
 $(document).ready(function () {
   var bgindex = Math.floor(Math.random() * bg.length)
   $('.centerbg').css('background-image', 'url("' + bg[bgindex] + '")')
-  $('#bg-next').click(function () {
+  $('#cover-next').click(function () {
     nextBG()
   })
-  $('#bg-pre').click(function () {
+  $('#cover-pre').click(function () {
     preBG()
   })
 })
@@ -689,10 +689,10 @@ var pjaxInit = function () {
   }
   $('.iconflat').css('width', '50px').css('height', '50px')
   $('.openNav').css('height', '50px')
-  $('#bg-next').click(function () {
+  $('#cover-next').click(function () {
     nextBG()
   })
-  $('#bg-pre').click(function () {
+  $('#cover-pre').click(function () {
     preBG()
   })
   smileBoxToggle()

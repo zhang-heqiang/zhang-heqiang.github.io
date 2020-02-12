@@ -337,17 +337,17 @@
       <h1 class="entry-title" style="color: red">
       Mysql数据库中的SQL基础语法</h1>
       <p class="entry-census" style="color: blue;font-weight: bolder">
-<!--        <span>-->
-<!--          <a href="">-->
-<!--            <img src="">-->
-<!--          </a>-->
-<!--        </span>-->
+        <span>
+          <a href="">
+            <img src="/images/avatar.jpg">
+          </a>
+        </span>
         <span>
           <a href=""></a>
         </span>
         <span class="bull">
         ·</span>
-        2019-12-8<span class="bull">
+        2020-2-12<span class="bull">
         ·</span>
       <span id="busuanzi_value_page_pv"></span>次阅读</p>
     </header>
@@ -361,12 +361,7 @@
         <!--<div class="toc-entry-content"> 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <h1 id="这么冷的天连个一起吃火锅的都没有-还好我自己有钱"><a href="#这么冷的天连个一起吃火锅的都没有-还好我自己有钱" class="headerlink" title="这么冷的天连个一起吃火锅的都没有,还好我自己有钱!"></a>这么冷的天连个一起吃火锅的都没有,还好我自己有钱!</h1><h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><pre><code>DateBase(DB):概念: 用于存储和管理数据的仓库
-特点:
-     1. 持久化存储数据的
-     2. 方便存储和管理数据
-     3. 使用了统一的方式操作数据库 -- SQL
-</code></pre><h2 id="手动登录MySQL"><a href="#手动登录MySQL" class="headerlink" title="手动登录MySQL"></a>手动登录MySQL</h2><pre><code>1. mysql -uroot -p密码
+          <h2 id="爱情可以晚点到-但外卖不行"><a href="#爱情可以晚点到-但外卖不行" class="headerlink" title="爱情可以晚点到,但外卖不行!"></a>爱情可以晚点到,但外卖不行!</h2><h2 id="手动登录MySQL"><a href="#手动登录MySQL" class="headerlink" title="手动登录MySQL"></a>手动登录MySQL</h2><pre><code>1. mysql -uroot -p密码
 2. mysql -hip -uroot -p连接目标的密码
 3. mysql --host=ip --user=root --password=连接目标的密码
 </code></pre><hr>
@@ -402,9 +397,9 @@
 <h2 id="操作数据"><a href="#操作数据" class="headerlink" title="操作数据"></a>操作数据</h2><h3 id="添加数据-insert"><a href="#添加数据-insert" class="headerlink" title="添加数据 insert"></a>添加数据 insert</h3><pre><code>insert into 表名(列名1,列名2,...列名n) values(值1,值2,...值n);
 </code></pre><h3 id="删除数据-delete"><a href="#删除数据-delete" class="headerlink" title="删除数据 delete"></a>删除数据 delete</h3><pre><code>delete from 表名 [where 条件];
 delete from 表名; 不推荐使用。有多少条记录就会执行多少次删除操作
-TRUNCATE TABLE 表名; 推荐使用，效率更高 先删除表，然后再创建一张一样的表
+TRUNCATE TABLE 表名;推荐使用，效率更高先删除表，然后再创建一张一样的表
 </code></pre><h3 id="修改数据-update"><a href="#修改数据-update" class="headerlink" title="修改数据 update"></a>修改数据 update</h3><pre><code>update 表名 set 列名1 = 值1, 列名2 = 值2,... [where 条件];如果不加任何条件，则会将表中所有记录全部修改
-</code></pre><h3 id="查询数据-select"><a href="#查询数据-select" class="headerlink" title="查询数据 select"></a>查询数据 select</h3><h4 id="语法格式"><a href="#语法格式" class="headerlink" title="语法格式"></a>语法格式</h4><pre><code>select
+</code></pre><h3 id="查询数据-select"><a href="#查询数据-select" class="headerlink" title="查询数据 select"></a>查询数据 select</h3><pre><code>select
     字段列表
 from
     表名列表
@@ -418,12 +413,6 @@ order by
     排序
 limit
     分页限定
-</code></pre><h4 id="空值替换"><a href="#空值替换" class="headerlink" title="空值替换"></a>空值替换</h4><pre><code>* ifnull(表达式1,表达式2);若表达式1为空替换为表达式2
-</code></pre><h4 id="分页查询"><a href="#分页查询" class="headerlink" title="分页查询"></a>分页查询</h4><pre><code>limit 是一个MySQL&quot;方言&quot;
-公式：开始的索引 = （当前的页码 - 1） * 每页显示的条数
-    SELECT * FROM student LIMIT 0,3; -- 第1页        -- 每页显示3条记录 
-    SELECT * FROM student LIMIT 3,3; -- 第2页
-    SELECT * FROM student LIMIT 6,3; -- 第3页
 </code></pre><hr>
 <h3 id="未完待续…"><a href="#未完待续…" class="headerlink" title="未完待续…"></a>未完待续…</h3>
         </div>
@@ -453,28 +442,11 @@ limit
       <div class="toc" style="background: none;"></div>
       <section class="post-squares nextprev">
         
-          
-            <div class="post-nepre half previous">
-          
-            <a href="/2019/12/11/Oracle%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/" rel="prev">
-              <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://i.loli.net/2019/11/13/8QagZNVkpfe7X4U.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://i.loli.net/2019/11/13/8QagZNVkpfe7X4U.jpg">
-              </div>
-              <span class="label">
-              上一篇</span>
-              <div class="info">
-                <h3>
-                ORACLE数据库中的SQL语法机巧</h3>
-                <hr>
-              </div>
-            </a>
-          </div>
-        
         
           
-            <div class="post-nepre half next">
+            <div class="post-nepre full next">
           
-            <a href="/2019/12/08/%E6%95%B0%E7%BB%84%E4%B8%8E%E9%9B%86%E5%90%88/" rel="next">
+            <a href="/2020/01/19/Java(Garbage%20Collection)/" rel="next">
               <div class="background">
                 <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://i.loli.net/2019/11/13/8QagZNVkpfe7X4U.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://i.loli.net/2019/11/13/8QagZNVkpfe7X4U.jpg">
               </div>
@@ -482,7 +454,7 @@ limit
               下一篇</span>
               <div class="info">
                 <h3>
-                数组与集合</h3>
+                Java内存分析及垃圾回收机制</h3>
                 <hr>
               </div>
             </a>

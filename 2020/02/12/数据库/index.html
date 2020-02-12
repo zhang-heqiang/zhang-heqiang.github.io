@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">四海之内皆兄弟 | 蓦然回首 博客</title>
+  <title itemprop="name">数据库基础介绍 | 蓦然回首 博客</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -325,77 +325,102 @@
   </div>
 </header>
 
-      <div class="pattern-center-blank">
-</div>
-<div class="pattern-center ">
-  <div class="pattern-attachment-img">
-    <img src="https://i.loli.net/2019/11/15/uH6TsnZI4xXl51P.jpg" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://i.loli.net/2019/11/15/uH6TsnZI4xXl51P.jpg" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://i.loli.net/2019/11/13/8QagZNVkpfe7X4U.jpg);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://i.loli.net/2019/11/13/8QagZNVkpfe7X4U.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title" style="color: red">
+      数据库基础介绍</h1>
+      <p class="entry-census" style="color: blue;font-weight: bolder">
+        <span>
+          <a href="">
+            <img src="/images/avatar.jpg">
+          </a>
+        </span>
+        <span>
+          <a href=""></a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2020-2-12<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
   </div>
-  <header class="pattern-header ">
-    <h1 class="entry-title" style="color: red">
-    友链交友</h1>
-  </header>
-</div>
+
 <div id="content" class="site-content">
-  <article class="post-item post-301 page type-page status-publish has-post-thumbnail hentry">
-    <h2 style="color: red">
-    欢迎交换友链</h2>
-    <h3 style="color: blue">
-      Please leave a message and tell me your friendship chain information ：<br>
-      Translate: 请留言告诉我你的友情链链信息：<br>
-    <p>
-      例如：<br>
-      ★ 站点: 다시 만날 수 있을까<br>
-      ★ 作者: 蓦然回首<br>
-      ★ 链接: https://zhang-heqiang.github.io<br>
-      ★ 头像: <a href="https://i.loli.net/2019/11/17/ELYjgGekvzVPmpu.jpg" target="_blank" rel="nofollow">
-      获取嵌入头像代码</a>
-    </p>
-    </h3>
-    <h4 style="font-size: 15px;color: green">
-      ★ 为保证友链质量，申请友链将经过筛选，请在收到本人回复邮件后再于贵站添加本站链接。原则上过去已添加友链不会轻易删除，友链主要针对同类的博客，如遇死链,将被清理移除；如遇盗版、破解等低质量内容链接,将直接永久移除本站链接，恕不另行通知。</h4>
-    
-      <div class="links">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"> 套嵌目录使用（主要为了支援评论）-->
         
-          <h3 class="link-title"><span class="fake-title">1. 个人项目</span></h3>
-          
-            <div class="link-description">此人较懒 不可描述</div>
-          
-          <ul class="link-items fontSmooth">
-            
-              <li class="link-item">
-                <a class="link-item-inner effect-apollo" href="https://zhang-heqiang.github.io/" title="蓦然回首 博客" target="_blank" rel="friend">
-                  <img class="lazyload" onerror="imgError(this,1)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://i.loli.net/2019/11/17/ELYjgGekvzVPmpu.jpg" src="https://i.loli.net/2019/11/17/ELYjgGekvzVPmpu.jpg">
-                  <span class="sitename">
-                  다시 만날 수 있을까</span>
-                  <div class="linkdes">
-                  蓦然回首 博客</div>
-                </a>
-              </li>
-            
-          </ul>
+        <div class="entry-content">
+          <h2 id="数据库设计"><a href="#数据库设计" class="headerlink" title="数据库设计"></a>数据库设计</h2><h3 id="第一范式"><a href="#第一范式" class="headerlink" title="第一范式"></a>第一范式</h3><pre><code>第一范式（1NF）：每一列都是不可分割的原子数据项
+</code></pre><h3 id="第二范式"><a href="#第二范式" class="headerlink" title="第二范式"></a>第二范式</h3><pre><code>在1NF的基础上，非码属性必须完全依赖于码（在1NF基础上消除非主属性对主码的部分函数依赖）
+</code></pre><h3 id="第三范式"><a href="#第三范式" class="headerlink" title="第三范式"></a>第三范式</h3><pre><code>在2NF基础上，任何非主属性不依赖于其它非主属性（在2NF基础上消除传递依赖）
+</code></pre><h2 id="数据库的备份与还原"><a href="#数据库的备份与还原" class="headerlink" title="数据库的备份与还原"></a>数据库的备份与还原</h2><pre><code>1. 命令行：
+* 语法：
+    * 备份： mysqldump -u用户名 -p密码 数据库名称 &gt;  保存的路径
+    * 还原：
+            1. 登录数据库
+            2. 创建数据库
+            3. 使用数据库
+            4. 执行文件。source 文件路径
+2. 图形化工具：略
+</code></pre>
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="/images/donate/AliPayQR.jpg"></li>
+                <li class="wechat-code"><img src="/images/donate/WeChanQR.jpg"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="/donate/" target="_blank" rel="nofollow">分享生活    留住感动    欢迎评论    感谢打赏 ......</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
         
-          <h3 class="link-title"><span class="fake-title">2. 友情链接</span></h3>
-          
-            <div class="link-description">欢迎交换友链,分享资源和故事</div>
-          
-          <ul class="link-items fontSmooth">
-            
-              <li class="link-item">
-                <a class="link-item-inner effect-apollo" href="http://www.kcz66.com" title="橙子个人博客" target="_blank" rel="friend">
-                  <img class="lazyload" onerror="imgError(this,1)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="http://cdn.kcz66.com/%E5%A4%B4%E5%83%8F.jpg" src="http://cdn.kcz66.com/%E5%A4%B4%E5%83%8F.jpg">
-                  <span class="sitename">
-                  橙子</span>
-                  <div class="linkdes">
-                  橙子个人博客</div>
-                </a>
-              </li>
-            
-          </ul>
         
-      </div>
-    
-    
+          
+            <div class="post-nepre full next">
+          
+            <a href="/2020/02/12/MySql%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://i.loli.net/2019/11/13/8QagZNVkpfe7X4U.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://i.loli.net/2019/11/13/8QagZNVkpfe7X4U.jpg">
+              </div>
+              <span class="label">
+              下一篇</span>
+              <div class="info">
+                <h3>
+                Mysql数据库中的SQL基础语法</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+            </div></div></section>
+      
 <div id="vcomments"></div>
 <script>
   window.onload = function(){
@@ -410,67 +435,25 @@
   }
 </script>
 
-    <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
-    <footer class="post-footer">
-      <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
-      <div class="post-tags">
-      </div>
-      <div class="post-share">
-        <div class="social-share sharehidden share-component"></div>
-        <i class="iconfont show-share icon-forward"></i>
-      </div>
-    </footer><!-- .entry-footer -->
-  </article>
-  <section class="author-profile">
-    <div class="info" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <a href="/about/" class="profile gravatar"><img src="/images/avatar.jpg" itemprop="image" alt="hojun" height="70" width="70"></a>
-      <div class="meta">
-        <span class="title">Author</span>
-        <h3 itemprop="name">
-        <a href="/" itemprop="url" rel="author">蓦然回首</a>
-        </h3>
-      </div>
-    </div>
-    <hr>
-    <p><i class="iconfont icon-write"></i>小生不才 姑娘莫怪</p>
-  </section>
-<!--   <div class="have-toc">
-  </div>
-  <div class="toc-container" style="height: 4886.5px;">
-    <div class="toc">
-      <ol class="toc-list ">
-        <li class="toc-list-item">
-          <a href="#toc-head-1" class="toc-link node-name--H3  is-active-link">
-          1. 个人项目</a>
-        </li>
-        <li class="toc-list-item">
-          <a href="#toc-head-2" class="toc-link node-name--H3 ">
-          2. 私人服务</a>
-        </li>
-        <li class="toc-list-item">
-          <a href="#toc-head-3" class="toc-link node-name--H3 ">
-          3. 后宫佳丽</a>
-        </li>
-        <li class="toc-list-item">
-          <a href="#toc-head-4" class="toc-link node-name--H3 ">
-          4. 小伙伴们</a>
-        </li>
-        <li class="toc-list-item">
-          <a href="#toc-head-5" class="toc-link node-name--H3 ">
-          5. 阵亡将士</a>
-        </li>
-        <li class="toc-list-item">
-          <a href="#toc-head-6" class="toc-link node-name--H3 ">
-          6. 大佬博客</a>
-        </li>
-        <li class="toc-list-item">
-          <a href="#toc-head-7" class="toc-link node-name--H3 ">
-          7. 特别链接</a>
-        </li>
-      </ol>
-    </div>
-  </div> -->
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <a href="" class="profile gravatar"><img src="/images/avatar.jpg" itemprop="image" alt="" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="" itemprop="url" rel="author"></a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i>小生不才 姑娘莫怪</p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
 </div>
+
+
+
     </div>    
     <div class="ins-search">
     <div class="ins-search-mask"></div>

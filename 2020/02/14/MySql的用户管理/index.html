@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">数据库基础介绍 | 蓦然回首 博客</title>
+  <title itemprop="name">MySql的用户管理 | 蓦然回首 博客</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -335,7 +335,7 @@
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title" style="color: red">
-      数据库基础介绍</h1>
+      MySql的用户管理</h1>
       <p class="entry-census" style="color: blue;font-weight: bolder">
         <span>
           <a href="">
@@ -347,7 +347,7 @@
         </span>
         <span class="bull">
         ·</span>
-        2020-2-12<span class="bull">
+        2020-2-14<span class="bull">
         ·</span>
       <span id="busuanzi_value_page_pv"></span>次阅读</p>
     </header>
@@ -361,18 +361,28 @@
         <!--<div class="toc-entry-content"> 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <h2 id="数据库设计"><a href="#数据库设计" class="headerlink" title="数据库设计"></a>数据库设计</h2><h3 id="第一范式"><a href="#第一范式" class="headerlink" title="第一范式"></a>第一范式</h3><pre><code>第一范式（1NF）：每一列都是不可分割的原子数据项
-</code></pre><h3 id="第二范式"><a href="#第二范式" class="headerlink" title="第二范式"></a>第二范式</h3><pre><code>在1NF的基础上，非码属性必须完全依赖于码（在1NF基础上消除非主属性对主码的部分函数依赖）
-</code></pre><h3 id="第三范式"><a href="#第三范式" class="headerlink" title="第三范式"></a>第三范式</h3><pre><code>在2NF基础上，任何非主属性不依赖于其它非主属性（在2NF基础上消除传递依赖）
-</code></pre><h2 id="数据库的备份与还原"><a href="#数据库的备份与还原" class="headerlink" title="数据库的备份与还原"></a>数据库的备份与还原</h2><pre><code>1. 命令行：
-* 语法：
-    * 备份： mysqldump -u用户名 -p密码 数据库名称 &gt;  保存的路径
-    * 还原：
-            1. 登录数据库
-            2. 创建数据库
-            3. 使用数据库
-            4. 执行文件。source 文件路径
-2. 图形化工具：略
+          <h2 id="添加用户"><a href="#添加用户" class="headerlink" title="添加用户"></a>添加用户</h2><pre><code>语法：CREATE USER &#39;用户名&#39;@&#39;主机名&#39; IDENTIFIED BY &#39;密码&#39;;
+</code></pre><h2 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h2><pre><code>语法：DROP USER &#39;用户名&#39;@&#39;主机名&#39;;
+</code></pre><h2 id="修改用户密码"><a href="#修改用户密码" class="headerlink" title="修改用户密码"></a>修改用户密码</h2><pre><code>UPDATE USER SET PASSWORD = PASSWORD(&#39;新密码&#39;) WHERE USER = &#39;用户名&#39;;
+UPDATE USER SET PASSWORD = PASSWORD(&#39;abc&#39;) WHERE USER = &#39;root&#39;;
+</code></pre><h2 id="查询用户："><a href="#查询用户：" class="headerlink" title="查询用户："></a>查询用户：</h2><pre><code>USE myql;
+SELECT * FROM USER;
+</code></pre><h2 id="ROOT用户密码忘记重置"><a href="#ROOT用户密码忘记重置" class="headerlink" title="ROOT用户密码忘记重置"></a>ROOT用户密码忘记重置</h2><pre><code>1. cmd -- &gt; **net stop mysql** 停止mysql服务(需要管理员运行cmd)
+2. 使用无验证方式启动mysql服务： **mysqld --skip-grant-tables**
+3. 打开新的cmd窗口,直接输入 **mysql** 命令，敲回车,即可登录成功
+4. **use mysql**;
+5. **update user set password = password(&#39;新密码&#39;) where user = &#39;root&#39;;**
+6. 关闭两个cmd窗口
+7. 手动打开任务管理器，结束mysqld.exe 进程
+8. 启动mysql服务 **net start mysql **
+9. 使用新密码登录。
+</code></pre><h2 id="权限管理"><a href="#权限管理" class="headerlink" title="权限管理"></a>权限管理</h2><h3 id="查询权限"><a href="#查询权限" class="headerlink" title="查询权限"></a>查询权限</h3><pre><code>SHOW GRANTS FOR &#39;用户名&#39;@&#39;主机名&#39;;
+SHOW GRANTS FOR &#39;root&#39;@&#39;%&#39;;
+</code></pre><h3 id="授予权限"><a href="#授予权限" class="headerlink" title="授予权限"></a>授予权限</h3><pre><code>GRANT 权限列表 ON 数据库名.表名 to &#39;用户名&#39;@&#39;主机名&#39;;
+
+GRANT ALL ON *.* TO &#39;zhangsan&#39;@&#39;localhost&#39;;给张三用户授予所有权限，在任意数据库任意表上
+</code></pre><h3 id="撤销权限"><a href="#撤销权限" class="headerlink" title="撤销权限"></a>撤销权限</h3><pre><code>REVOKE 权限列表 ON 数据库名.表名 FROM &#39;用户名&#39;@&#39;主机名&#39;;
+REVOKE UPDATE ON db3.`account` FROM &#39;lisi&#39;@&#39;%&#39;;
 </code></pre>
         </div>
         <!-- .entry-content -->
@@ -405,7 +415,7 @@
           
             <div class="post-nepre full next">
           
-            <a href="/2020/02/12/MySql%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" rel="next">
+            <a href="/2020/02/12/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8%E8%AE%BE%E8%AE%A1%E4%B8%89%E5%A4%A7%E8%8C%83%E5%BC%8F/" rel="next">
               <div class="background">
                 <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://i.loli.net/2019/11/13/8QagZNVkpfe7X4U.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://i.loli.net/2019/11/13/8QagZNVkpfe7X4U.jpg">
               </div>
@@ -413,7 +423,7 @@
               下一篇</span>
               <div class="info">
                 <h3>
-                Mysql数据库中的SQL基础语法</h3>
+                数据库设计三大范式</h3>
                 <hr>
               </div>
             </a>

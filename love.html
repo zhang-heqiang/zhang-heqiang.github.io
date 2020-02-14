@@ -22,17 +22,27 @@
 
 <style>
 	.comments{
-		font-size: 30px;
+		font-size: 20px;
 		font-weight: bolder;
 	}
 	.author{
 		font-size: 20px;
 		font-weight: bolder;
-		color: red;
+		color: blue;
+	}
+	.already{
+		font-size: 20px;
+		font-weight: bolder;
+		color: white;
 	}
 
+	.word{
+		font-size: 20px;
+		font-weight: bolder;
+		color: red;
+	}
 	.love{
-		font-size: 40px;
+		font-size: 20px;
 		font-weight: bolder;
 		color: red;
 	}
@@ -50,21 +60,19 @@
 	<div id="mainDiv">
 		<div id="content">
 			<div id="code">
-<!--				<span class="comments">/**</span><br />-->
-				<span class="space"/><span class="comments">蓦然回首:</span><br />
-<!--				<span class="space"/><span class="comments">山有木兮木有枝</span><br />-->
-<!--    		    <span class="space"/><span class="comments">心悦君兮君不知</span><br />-->
-				<span class="space"/><span class="comments">从遇见你那一刻</span><br />
-				<span class="space"/><span class="comments">我变得充满勇气</span><br />
-				<span class="space"/><span class="comments">我不确定是否有那么一天</span><br />
-				<span class="space"/><span class="comments">你会喜欢我的一颦一笑</span><br />
-				<span class="space"/><span class="comments">和给你的拥抱</span><br />
-				<span class="space"/><span class="comments">但我对你的喜欢</span><br />
-				<span class="space"/><span class="comments">已经远远超过两分钟</span><br />
-     		    <span class="space"/><span class="comments">无法撤回了</span><br />
-     		    <span class="space"/><span class="love">我 爱 你</span><br />
-     		    <span class="space"/><span class="author">❤❤❤❤❤❤❤❤❤❤❤❤❤❤❥  灯火阑珊</span><br />
-<!--				<span class="space"/><span class="comments">*/</span><br />-->
+				<span class="author"><span class="love">❤ </span>蓦然回首</span><br />
+				<span class="comments"><span class="love">❤ </span>从遇见你那一刻</span><br />
+				<span class="comments"><span class="love">❤ </span>我觉得用尽了所有的运气</span><br />
+				<span class="comments"><span class="love">❤ </span>我不确定是否有那么一天</span><br />
+				<span class="comments"><span class="love">❤ </span>你会喜欢我的一颦一笑</span><br />
+				<span class="comments"><span class="love">❤ </span>和给你的拥抱</span><br />
+				<span class="comments"><span class="love">❤ </span>但我对你的喜欢</span><br />
+				<span class="comments"><span class="love">❤ </span>已经远远远超过两分钟</span><br />
+     		    <span class="comments"><span class="love">❤ </span>无法撤回了</span><br />
+     		    <span class="author" style="color: white"></span><br />
+     		    <span class="author" style="color: white">山有木兮木有枝</span><br />
+     		    <span class="author" style="color: white">心悦君兮君不知</span><br />
+<!--     		    <span class="space"/><span class="love">我 爱 你</span><br />-->
 <!--				Girl u = <span class="keyword">new</span> Girl(<span class="string">"Abby"</span>);<br/>-->
 <!--				Boy i = <span class="keyword">new</span> Boy(<span class="string">"Mark"</span>);<br />-->
 <!--				<span class="comments">// 今天是二月十四日。 </span><br />-->
@@ -95,11 +103,12 @@
 				<canvas id="garden"></canvas>
 				<div id="words">
 					<div id="messages">
-						        慕容回首,我们已经相爱了：
-						<div id="elapseClock"></div>
+						<span class="author">张贺强</span>
+						<span class="already" >我已经爱上你</span>
+						<div id="elapseClock" class="word"></div>
 					</div>
 					<div id="loveu">
-						<div class="signature">--灯火阑珊</div>
+						<div class="signature author">--灯火阑珊</div>
 					</div>
 				</div>
 
@@ -125,7 +134,8 @@
 		var offsetX = $("#loveHeart").width() / 2;
 		var offsetY = $("#loveHeart").height() / 2 - 55;
 		var together = new Date();
-		together.setFullYear(2010, 06, -32);
+		//时间从2020年2月14号情人节认识那天开始算起
+		together.setFullYear(2020, 02, -15);
 		together.setHours(00);
 		together.setMinutes(0);
 		together.setSeconds(0);
@@ -154,6 +164,7 @@
 			$("#code").typewriter();
 		}
 	</script>
-	<embed src="//music.163.com/outchain/player?type=2&id=1398821876&auto=1&height=66" autostart="true" loop="true" hidden="true"></embed>
+<!--	<embed src="//music.163.com/outchain/player?type=2&id=1398821876&auto=1&height=66" autostart="true" loop="true" hidden="true"></embed>-->
+	<embed src="//music.163.com/outchain/player?type=2&id=1398821876&auto=1&height=66" loop="true" hidden="true"></embed>
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>

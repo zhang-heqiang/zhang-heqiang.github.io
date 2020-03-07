@@ -3965,7 +3965,7 @@ li.feature-2 {
     width: 100%;
     z-index: 0;
 }
-}.blank {
+.blank {
     padding-top:80px;
     background-color:rgba(255,255,255,1)
 }
@@ -6307,12 +6307,14 @@ button.botui-actions-buttons-button {
 .changeSkin-gear i {
     font-size:20px
 }
-}position:relative;
+}
+
+.position:relative{
     z-index:99;
     cursor:pointer
 }
 .changeSkin-gear span:before {
-    content:"切换主题 | Change Skin "
+    content:"切换主题"
 }
 @media(max-width:800px) {
     .changeSkin-gear span::before {

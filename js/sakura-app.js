@@ -1662,7 +1662,7 @@ String.prototype.render = function (context) {
 
 $(document).ready(function () {
     setTimeout(function () {
-        isFirstLoad = true
+        isFirstLoad = true;
         if (document.body.clientWidth > 860) {
             $('.changeSkin-gear').css('visibility', 'visible')
         }

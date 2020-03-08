@@ -18,8 +18,8 @@
   <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
   <link rel="stylesheet" href="/css/zoom.css" media="all">
   <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
-<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
-" type="text/css" media="all"> -->
+<!--  <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css" type="text/css" media="all">-->
+
   <script>
   /*Initial Variables*/
   var mashiro_option = new Object();
@@ -42,7 +42,7 @@
   mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/";
   mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
 
-  mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
   mashiro_option.float_player_on = true;
 
   /*End of Initial Variables*/
@@ -61,9 +61,11 @@
   </style>
 
 <!--  鼠标点击桃心效果-->
-  <script type="text/javascript" src="../../source/js/loveHeart.js"></script>
+  <script type="text/javascript" src="/js/loveHeart.js"></script>
+  <script type="text/javascript" src="/css/lib.min.css"></script>
+<!--  樱花特效-->
+  <script  src="/js/sakuraPlus.js"></script>
 
-  <!-- 实现换肤功能 -->
   <div class="skin-menu no-select" id="mainskin" style="position: fixed">
     <div class="theme-controls row-container">
         <ul class="menu-list">
@@ -78,7 +80,7 @@
         </ul>
     </div>
 </div>
-<canvas id="night-mode-cover"></canvas>
+<!--<canvas id="night-mode-cover"></canvas>-->
   <div class="changeSkin-gear no-select">
     <div class="keys" id="setbtn">
    <span id="open-skinMenu">
@@ -86,245 +88,6 @@
    </span>
     </div>
 </div>
-  <div id="mo-nav" class="">
-  <div class="m-avatar">
-    <img src="/images/avatar.jpg">
-  </div>
-  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">다시 만날 수 있을까</p>
-  <p style="text-align: center; word-spacing: 20px;">
-    
-      
-        <a href="https://github.com/zhang-heqiang/zhang-heqiang.github.io" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
-      
-        <a href="https://weibo.com/5724200026/" class="fa fa-weibo" target="_blank" style="color: #dd4b39; margin-left:20px"></a>
-      
-        <a href="https://wpa.qq.com/msgrd?v=3&uin=1743167187&site=qq&menu=yes" class="fa fa-qq" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
-      
-    
-  </p>
-  <ul id="menu-new-1" class="menu">
-    
-      <li>
-        <a href="/">
-          <span class="faa-parent animated-hover">
-            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
-            首页
-          </span>
-        </a>
-        
-      </li>
-    
-      <li>
-        <a href="/archives">
-          <span class="faa-parent animated-hover">
-            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
-            归档
-          </span>
-        </a>
-        
-          <ul class="sub-menu">
-            
-              <li>
-                <a href="/categories/%E5%9F%BA%E7%A1%80/">
-                  <i class="fa fa-book" aria-hidden="true"></i>
-                  基础
-                </a>
-              </li>
-            
-              <li>
-                <a href="/categories/%E8%BF%9B%E9%98%B6/">
-                  <i class="fa fa-book" aria-hidden="true"></i>
-                  进阶
-                </a>
-              </li>
-            
-              <li>
-                <a href="/categories/%E9%85%8D%E7%BD%AE/">
-                  <i class="fa fa-book" aria-hidden="true"></i>
-                  配置
-                </a>
-              </li>
-            
-          </ul>
-        
-      </li>
-    
-      <li>
-        <a href="/">
-          <span class="faa-parent animated-hover">
-            <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
-            标签
-          </span>
-        </a>
-        
-          <ul class="sub-menu">
-            
-              <li>
-                <a href="/tags/%E5%89%8D%E7%AB%AF/">
-                  <i class="fa fa-book" aria-hidden="true"></i>
-                  前端
-                </a>
-              </li>
-            
-              <li>
-                <a href="/tags/%E5%90%8E%E7%AB%AF/">
-                  <i class="fa fa-book" aria-hidden="true"></i>
-                  后端
-                </a>
-              </li>
-            
-          </ul>
-        
-      </li>
-    
-      <li>
-        <a href="/MRHSDHLS/comment.html">
-          <span class="faa-parent animated-hover">
-            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
-            留言
-          </span>
-        </a>
-        
-      </li>
-    
-      <li>
-        <a href="/MRHSDHLS/links.html">
-          <span class="faa-parent animated-hover">
-            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
-            朋友
-          </span>
-        </a>
-        
-      </li>
-    
-      <li>
-        <a href="/MRHSDHLS/donate.html">
-          <span class="faa-parent animated-hover">
-            <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
-            赞赏
-          </span>
-        </a>
-        
-      </li>
-    
-      <li>
-        <a href="/">
-          <span class="faa-parent animated-hover">
-            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
-            关于
-          </span>
-        </a>
-        
-          <ul class="sub-menu">
-            
-              <li>
-                <a href="/MRHSDHLS/about.html">
-                  <i class="fa fa-meetup" aria-hidden="true"></i>
-                  博客
-                </a>
-              </li>
-            
-              <li>
-                <a href="/MRHSDHLS/books.html">
-                  <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
-                  书单
-                </a>
-              </li>
-            
-              <li>
-                <a href="/MRHSDHLS/songs.html">
-                  <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
-                  歌单
-                </a>
-              </li>
-            
-              <li>
-                <a href="/MRHSDHLS/photos.html">
-                  <i class="fa fa-photo" aria-hidden="true"></i>
-                  图集
-                </a>
-              </li>
-            
-              <li>
-                <a href="/MRHSDHLS/pleasure.html">
-                  <i class="fa fa-commenting-o" aria-hidden="true"></i>
-                  娱乐
-                </a>
-              </li>
-            
-          </ul>
-        
-      </li>
-    
-  </ul>
-<!--  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>-->
-</div>
-<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-<!-- require MetingJS -->
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-<style>
-  .aplayer .aplayer-lrc {
-    height: 35px;
-  }
-  .aplayer .aplayer-lrc p{
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 18px !important;
-  }
-  .aplayer .aplayer-lrc p.aplayer-lrc-current{
-    color: #FF1493;
-  }
-  .aplayer.aplayer-narrow .aplayer-body{
-    left: -66px !important;
-  }
-  .aplayer.aplayer-fixed .aplayer-lrc {
-    display: none;
-  }
-  .aplayer .aplayer-lrc.aplayer-lrc-hide {
-      display:none !important;
-  }
-  .aplayer.aplayer-fixed .lrc-show {
-    display: block;
-    background: rgba(255, 255, 255, 0.8);
-  }
-</style>
-<meting-js
-
-    id="3069955907"
-
-    server="netease"
-
-    type="playlist"
-
-    fixed="true"
-
-    autoplay="false"
-
-    loop="all"
-
-    order="random"
-
-    preload="auto"
-
-    volume="0.7"
-
-    mutex="true"
-
-</meting-js>
-<script>
-  $(function(){
-    $('body').on('click', '.aplayer', function(){
-      if($('.aplayer-button').hasClass('aplayer-play')) {
-        $('.aplayer-lrc').removeClass('lrc-show');
-      } else {
-        $('.aplayer-lrc').addClass('lrc-show');
-      }
-    })
-  });
-</script>
-
 </head>
 
 <body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
@@ -338,7 +101,7 @@
   <figure id="centerbg" class="centerbg">
     <div class="focusinfo no-select">
       <div class="header-tou">
-        <a href="https://zhang-heqiang.github.io" target="_blank" rel="noopener">
+        <a href="/">
           <img src="/images/avatar.jpg">
         </a>
       </div>
@@ -862,246 +625,8 @@ $(document).ready(function() {
       </div>
     </div>
   </section>
-  <div id="mo-nav" class="">
-  <div class="m-avatar">
-    <img src="/images/avatar.jpg">
-  </div>
-  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">다시 만날 수 있을까</p>
-  <p style="text-align: center; word-spacing: 20px;">
-    
-      
-        <a href="https://github.com/zhang-heqiang/zhang-heqiang.github.io" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
-      
-        <a href="https://weibo.com/5724200026/" class="fa fa-weibo" target="_blank" style="color: #dd4b39; margin-left:20px"></a>
-      
-        <a href="https://wpa.qq.com/msgrd?v=3&uin=1743167187&site=qq&menu=yes" class="fa fa-qq" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
-      
-    
-  </p>
-  <ul id="menu-new-1" class="menu">
-    
-      <li>
-        <a href="/">
-          <span class="faa-parent animated-hover">
-            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
-            首页
-          </span>
-        </a>
-        
-      </li>
-    
-      <li>
-        <a href="/archives">
-          <span class="faa-parent animated-hover">
-            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
-            归档
-          </span>
-        </a>
-        
-          <ul class="sub-menu">
-            
-              <li>
-                <a href="/categories/%E5%9F%BA%E7%A1%80/">
-                  <i class="fa fa-book" aria-hidden="true"></i>
-                  基础
-                </a>
-              </li>
-            
-              <li>
-                <a href="/categories/%E8%BF%9B%E9%98%B6/">
-                  <i class="fa fa-book" aria-hidden="true"></i>
-                  进阶
-                </a>
-              </li>
-            
-              <li>
-                <a href="/categories/%E9%85%8D%E7%BD%AE/">
-                  <i class="fa fa-book" aria-hidden="true"></i>
-                  配置
-                </a>
-              </li>
-            
-          </ul>
-        
-      </li>
-    
-      <li>
-        <a href="/">
-          <span class="faa-parent animated-hover">
-            <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
-            标签
-          </span>
-        </a>
-        
-          <ul class="sub-menu">
-            
-              <li>
-                <a href="/tags/%E5%89%8D%E7%AB%AF/">
-                  <i class="fa fa-book" aria-hidden="true"></i>
-                  前端
-                </a>
-              </li>
-            
-              <li>
-                <a href="/tags/%E5%90%8E%E7%AB%AF/">
-                  <i class="fa fa-book" aria-hidden="true"></i>
-                  后端
-                </a>
-              </li>
-            
-          </ul>
-        
-      </li>
-    
-      <li>
-        <a href="/MRHSDHLS/comment.html">
-          <span class="faa-parent animated-hover">
-            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
-            留言
-          </span>
-        </a>
-        
-      </li>
-    
-      <li>
-        <a href="/MRHSDHLS/links.html">
-          <span class="faa-parent animated-hover">
-            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
-            朋友
-          </span>
-        </a>
-        
-      </li>
-    
-      <li>
-        <a href="/MRHSDHLS/donate.html">
-          <span class="faa-parent animated-hover">
-            <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
-            赞赏
-          </span>
-        </a>
-        
-      </li>
-    
-      <li>
-        <a href="/">
-          <span class="faa-parent animated-hover">
-            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
-            关于
-          </span>
-        </a>
-        
-          <ul class="sub-menu">
-            
-              <li>
-                <a href="/MRHSDHLS/about.html">
-                  <i class="fa fa-meetup" aria-hidden="true"></i>
-                  博客
-                </a>
-              </li>
-            
-              <li>
-                <a href="/MRHSDHLS/books.html">
-                  <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
-                  书单
-                </a>
-              </li>
-            
-              <li>
-                <a href="/MRHSDHLS/songs.html">
-                  <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
-                  歌单
-                </a>
-              </li>
-            
-              <li>
-                <a href="/MRHSDHLS/photos.html">
-                  <i class="fa fa-photo" aria-hidden="true"></i>
-                  图集
-                </a>
-              </li>
-            
-              <li>
-                <a href="/MRHSDHLS/pleasure.html">
-                  <i class="fa fa-commenting-o" aria-hidden="true"></i>
-                  娱乐
-                </a>
-              </li>
-            
-          </ul>
-        
-      </li>
-    
-  </ul>
-<!--  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>-->
-</div>
-<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-<!-- require MetingJS -->
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-<style>
-  .aplayer .aplayer-lrc {
-    height: 35px;
-  }
-  .aplayer .aplayer-lrc p{
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 18px !important;
-  }
-  .aplayer .aplayer-lrc p.aplayer-lrc-current{
-    color: #FF1493;
-  }
-  .aplayer.aplayer-narrow .aplayer-body{
-    left: -66px !important;
-  }
-  .aplayer.aplayer-fixed .aplayer-lrc {
-    display: none;
-  }
-  .aplayer .aplayer-lrc.aplayer-lrc-hide {
-      display:none !important;
-  }
-  .aplayer.aplayer-fixed .lrc-show {
-    display: block;
-    background: rgba(255, 255, 255, 0.8);
-  }
-</style>
-<meting-js
 
-    id="3069955907"
 
-    server="netease"
-
-    type="playlist"
-
-    fixed="true"
-
-    autoplay="false"
-
-    loop="all"
-
-    order="random"
-
-    preload="auto"
-
-    volume="0.7"
-
-    mutex="true"
-
-</meting-js>
-<script>
-  $(function(){
-    $('body').on('click', '.aplayer', function(){
-      if($('.aplayer-button').hasClass('aplayer-play')) {
-        $('.aplayer-lrc').removeClass('lrc-show');
-      } else {
-        $('.aplayer-lrc').addClass('lrc-show');
-      }
-    })
-  });
-</script>
-
-  <script type="text/javascript" src="../source/css/lib.min.css"></script>
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         tex2jax: {

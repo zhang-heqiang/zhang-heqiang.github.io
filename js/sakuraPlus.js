@@ -1,4 +1,4 @@
-//妯辫姳
+//樱花背景
 
 var stop, staticx;
 var img = new Image();
